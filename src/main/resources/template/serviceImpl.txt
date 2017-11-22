@@ -1,0 +1,70 @@
+package com.${packageName}.service.impl;
+
+import ${packageName}.model.${modelUpName};
+import ${packageName}.service.${modelUpName}Service;
+import ${packageName}.dao.${modelUpName}Mapper;
+import com.ccx.util.page.Page;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import java.util.*;
+
+@Service
+public class ${modelUpName}ServiceImpl implements ${modelUpName}Service {
+	
+	@Autowired
+    private ${modelUpName}Mapper ${modelName}Mapper;
+	
+	//主键获取
+	@Override
+	public ${modelUpName} getById(${keyType} id) {
+		return ${modelName}Mapper.selectByPrimaryKey(id);
+	}
+	
+	//获取无参list
+	@Override
+	public List<${modelUpName}> getList() {
+		return null;
+	}
+	
+	//获取有参数list
+	@Override
+	public List<${modelUpName}> getList(${modelUpName} model) {
+		return null;
+	}
+	
+	//获取带分页list
+	@Override
+	public Page<${modelUpName}> getPageList(Page<${modelUpName}> page) {
+		return null;
+	}
+	
+	//通过条件获取
+	@Override
+	public ${modelUpName} getByModel(${modelUpName} model) {
+		return null;
+	}
+
+	//保存对象
+	@Override
+	public int save(${modelUpName} model) {
+		return ${modelName}Mapper.insert(model);
+	}
+
+	//更新对象
+	@Override
+	public int update(${modelUpName} model) {
+		return ${modelName}Mapper.updateByPrimaryKey(model);
+	}
+	
+	//删除对象
+	@Override
+	public int deleteById(${keyType} id) {
+		return ${modelName}Mapper.deleteByPrimaryKey(id);
+	}
+	
+	//其他查询
+	@Override
+	public Map<String, Object> getOther() {
+		return null;
+	}
+}

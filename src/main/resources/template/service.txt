@@ -1,0 +1,35 @@
+package com.${packageName}.service;
+
+import ${packageName}.model.${modelUpName};
+import com.ccx.util.page.Page;
+import java.util.*;
+
+public interface ${modelUpName}Service {
+	
+	//主键获取
+	${modelUpName} getById(${keyType} id);
+	
+	//获取无参list
+	List<${modelUpName}> getList();
+	
+	//获取有参数list
+	List<${modelUpName}> getList(${modelUpName} model);
+	
+	//获取带分页list
+	Page<${modelUpName}> getPageList(Page<${modelUpName}> page);
+	
+	//通过条件获取
+	${modelUpName} getByModel(${modelUpName} model);
+
+	//保存对象
+	int save(${modelUpName} model);
+
+	//更新对象
+	int update(${modelUpName} model);
+	
+	//删除对象
+	int deleteById(${keyType} id);
+	
+	//其他查询
+	Map<String, Object> getOther();
+}

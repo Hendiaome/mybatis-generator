@@ -1,0 +1,74 @@
+package com.${packageName}.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+import javax.servlet.http.HttpServletRequest;	
+import ${packageName}.model.${modelUpName};
+import ${packageName}.service.${modelUpName}Service;
+import java.util.*;
+
+@Controller
+@RequestMapping("/${modelName}")
+public class ${modelUpName}Controller {
+	
+	@Autowired
+	private ${modelUpName}Service ${modelName}Service;
+	
+	/*
+	 * @author 
+	 * @description
+	 * @date
+	*/
+	@RequestMapping(value="/${modelName}index", method=RequestMethod.GET)
+	public ModelAndView ${modelName}Index(HttpServletRequest request) {
+		ModelAndView mnv = new ModelAndView("");
+		try {
+			
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+		return mnv;
+	}
+	
+	/*
+	 * @author 
+	 * @description
+	 * @date
+	*/
+	@RequestMapping(value="/${modelName}AddOrEdit", method=RequestMethod.GET)
+	public ModelAndView ${modelName}AddOrEdit(HttpServletRequest request) {
+		ModelAndView mnv = new ModelAndView("");
+		try {
+			
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+		return mnv;
+	}
+	
+	/*
+	 * @author 
+	 * @description
+	 * @date
+	*/
+	@RequestMapping(value="/${modelName}AddOrEditSave", method=RequestMethod.POST, produce="application/json;charset=UTF-8")
+	@ResponseBody
+	public Map<String, Object> ${modelName}AddOrEditSave(${modelUpName} model) {
+		Map<String, Object> resultMap = new HashMap<>();
+		
+		try {
+			${modelName}Service.save(model);
+			resultMap.put("code", 200);
+		} catch (Exception e) {
+			resultMap.put("code", 500);
+		}
+		return resultMap;
+	}
+	
+	
+}
