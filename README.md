@@ -7,6 +7,7 @@ notice<br>
   3.fill the database url, user, password. then click "click btn".<br>
   4.select a table to geneator, all file will create in current out dir。<br>
   
+ #mybatis界面生成工程文件<br>
   提示<br>
     1.导入项目到eclipse或者idea。<br>
     2.运行Main1文件，在界面中填入数据库url，用户，密码，点击测试链接，成功的话会生成表。<br>
