@@ -14,3 +14,4 @@ notice<br>
     2.运行Main1文件，在界面中填入数据库url，用户，密码，点击测试链接，成功的话会生成表。<br>
     3.选择要生成的表，生成controller，service，model，mappe xml。文件在当前文件夹的out目录下。<br>
  也可以直接运行，window下双击build.jar 或者java -jar build.jar.
+ 
